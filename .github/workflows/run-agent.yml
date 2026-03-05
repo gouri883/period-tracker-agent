@@ -1,0 +1,29 @@
+name: Run AI Period Tracker Agent
+
+on:
+  schedule:
+    - cron: "30 3 * * *"    # 9 AM India
+    - cron: "30 9 * * *"    # 3 PM India
+    - cron: "30 15 * * *"   # 9 PM India
+  workflow_dispatch:
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run AI agent
+        run: |
+          python scheduler.py
