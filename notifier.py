@@ -3,11 +3,14 @@ from email.mime.text import MIMEText
 import os
 
 
+
+
+
 def send_notification(message):
 
-    sender = os.getenv("EMAIL_SENDER")
-    password = os.getenv("EMAIL_PASSWORD")
-    receiver = os.getenv("EMAIL_RECEIVER")
+    sender = "gourinandanarajesh@gmail.com"
+    password = "sveuufdpgdzlxvfc"
+    receiver = "gourinandanarajesh@gmail.com"
 
     msg = MIMEText(message)
 
