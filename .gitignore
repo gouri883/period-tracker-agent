@@ -2,4 +2,3 @@ venv/
 __pycache__/
 *.pyc
 .env
-cycles.db
