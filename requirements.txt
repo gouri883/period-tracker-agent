@@ -2,3 +2,4 @@ streamlit
 pandas
 schedule
 python-dotenv
+plotly
